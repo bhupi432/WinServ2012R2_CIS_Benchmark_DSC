@@ -1,42 +1,49 @@
-Host-Based Assessment Automation Script
+# WinServ2012R2 Automation Script
 
-Purpose:
+## Purpose
+
 This script automates the enforcement of security configurations based on the CIS Benchmark for Windows Server 2012 R2 version 1.0.0. Leveraging PowerShell Desired State Configuration (DSC), it ensures consistent application of security policies across systems, enhancing system security and reducing manual effort.
 
-How to Run:
+## How to Run
 
-    Ensure PowerShell script execution is allowed. You can do this by running: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force.
-    Execute the script: .\CIS_Benchmark_WindowsServer2012_R2_v1_0_0.ps1. This will generate Managed Object Format (MOF) files in the current directory.
+1. Ensure PowerShell script execution is allowed by running:
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
+    ```
+2. Execute the script: 
+    ```powershell
+    .\CIS_Benchmark_WindowsServer2012_R2_v1_0_0.ps1
+    ```
+   This will generate Managed Object Format (MOF) files in the current directory.
 
-Regulations for the Script:
+## Regulations for the Script
 
-    Ensure proper permissions are set for executing PowerShell scripts.
-    Run the script with appropriate privileges (preferably as an administrator) to apply system configurations.
-    Review the output carefully to address any identified security concerns.
-    Customize script functionalities as per specific security requirements or environment configurations.
+- Ensure proper permissions are set for executing PowerShell scripts.
+- Run the script with appropriate privileges (preferably as an administrator) to apply system configurations.
+- Review the output carefully to address any identified security concerns.
+- Customize script functionalities as per specific security requirements or environment configurations.
 
-Do's:
+## Do's
 
-    Execute the script on Windows Server 2012 R2 systems.
-    Regularly update and maintain the script according to evolving security standards and system changes.
-    Ensure necessary backups are taken before applying any configuration changes suggested by the script.
+- Execute the script on Windows Server 2012 R2 systems.
+- Regularly update and maintain the script according to evolving security standards and system changes.
+- Ensure necessary backups are taken before applying any configuration changes suggested by the script.
 
-Don'ts:
+## Don'ts
 
-    Do not execute the script on unsupported Windows Server versions.
-    Avoid making blind changes without understanding the implications of suggested configurations.
-    Do not share sensitive output or system information from the script output publicly.
+- Do not execute the script on unsupported Windows Server versions.
+- Avoid making blind changes without understanding the implications of suggested configurations.
+- Do not share sensitive output or system information from the script output publicly.
 
-Benefits of the Script:
+## Benefits of the Script
 
-    Time Efficiency: Reduces the time required for manual security configuration by automating various checks.
-    Consistency: Ensures consistent application of security configurations across Windows Server systems.
-    Accuracy: Minimizes human errors associated with manual configuration enforcement.
-    Enhanced Security: Helps identify and address potential security vulnerabilities promptly.
+1. **Time Efficiency:** Reduces the time required for manual security configuration by automating various checks.
+2. **Consistency:** Ensures consistent application of security configurations across Windows Server systems.
+3. **Accuracy:** Minimizes human errors associated with manual configuration enforcement.
+4. **Enhanced Security:** Helps identify and address potential security vulnerabilities promptly.
 
-Additional Notes:
+## Additional Notes
 
-    The script requires PowerShell version 5.1 or later.
-    Ensure DSC modules (AuditPolicyDsc, SecurityPolicyDsc, NetworkingDsc, PSDesiredStateConfiguration) are installed. You can check and install them using PowerShell commands.
-    Exercise caution while implementing changes suggested by the script, especially in production environments.
-
+- The script requires PowerShell version 5.1 or later.
+- Ensure DSC modules (AuditPolicyDsc, SecurityPolicyDsc, NetworkingDsc, PSDesiredStateConfiguration) are installed. You can check and install them using PowerShell commands.
+- Exercise caution while implementing changes suggested by the script, especially in production environments.
